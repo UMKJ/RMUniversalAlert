@@ -56,6 +56,7 @@ static NSInteger const RMUniversalAlertFirstOtherButtonIndex = 2;
                                                                         if (tapBlock) {
                                                                             tapBlock(alert, buttonIndex);
                                                                         }
+            alert.alertController = nil;
                                                                     }];
     } else {
         NSMutableArray *other = [NSMutableArray array];
@@ -88,6 +89,7 @@ static NSInteger const RMUniversalAlertFirstOtherButtonIndex = 2;
                                                          tapBlock(alert, RMUniversalAlertFirstOtherButtonIndex + otherOffset);
                                                      }
                                                  }
+            alert.alertView = nil;
                                              }];
     }
     
@@ -132,6 +134,7 @@ static NSInteger const RMUniversalAlertFirstOtherButtonIndex = 2;
                                                                               if (tapBlock) {
                                                                                   tapBlock(alert, buttonIndex);
                                                                               }
+            alert.alertController = nil;
                                                                           }];
     } else {
         
@@ -146,6 +149,7 @@ static NSInteger const RMUniversalAlertFirstOtherButtonIndex = 2;
                     tapBlock(alert, RMUniversalAlertFirstOtherButtonIndex + otherOffset);
                 }
             }
+            alert.actionSheet = nil;
         };
         
         void (^standardActionSheetBlock)(void) = ^{
